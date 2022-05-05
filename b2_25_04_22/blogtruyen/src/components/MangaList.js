@@ -8,7 +8,7 @@ const MangaList = () => {
 	return (
 		<div className="manga-list center">
 			{mangaList.map((manga) => {
-				return <MangaContainer {...manga} />;
+				return <MangaContainer key={manga["id"]} {...manga} />;
 			})}
 		</div>
 	);

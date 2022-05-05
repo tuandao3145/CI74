@@ -34,6 +34,3 @@ const MangaContainer = (props) => {
 };
 
 export default MangaContainer;
-{
-	/* <img src={props["photo"]} alt="Đây là ảnh" />; */
-}
