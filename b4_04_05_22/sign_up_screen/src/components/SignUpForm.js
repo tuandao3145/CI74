@@ -92,17 +92,9 @@ const SignUpForm = () => {
 
 	//
 	const clearForm = () => {
-		setFirstName();
-		setLastName();
-		setGender();
-		setAge();
-		setAddress();
-		setEmail();
-		setPassword();
-		setConfirmPassword();
-		//
-		handleInfo();
-		console.log(info);
+		console.log("hello");
+		document.getElementById("signUpForm").reset();
+		console.log("done");
 	};
 
 	//
@@ -115,7 +107,7 @@ const SignUpForm = () => {
 	//render signup form
 	return (
 		<div className="signUpContainer">
-			<form onSubmit={handleSignUp} className="center">
+			<form onSubmit={handleSignUp} className="center" id="signUpForm">
 				<h2>Sign-up your account</h2>
 				<div className="center">
 					<label>
