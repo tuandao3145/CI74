@@ -29,7 +29,6 @@ export default function JAVTutorial() {
 	};
 
 	const deleteItem = (itemId) => {
-		console.log("Xóa 1 item có id là " + itemId);
 		const newData = [...data].filter((jav) => {
 			return jav.id !== itemId;
 		});
@@ -37,10 +36,19 @@ export default function JAVTutorial() {
 	};
 
 	const watchItem = (itemId) => {
-		console.log("Đã xem 1 item có id là " + itemId);
 		const newData = [...data].map((jav) => {
 			if (jav.id === itemId) {
 				jav.watched = true;
+			}
+			return jav;
+		});
+		setData(newData);
+	};
+
+	const editItem = (itemId, newName) => {
+		const newData = [...data].map((jav) => {
+			if (jav.id === itemId) {
+				jav.name = newName;
 			}
 			return jav;
 		});
@@ -56,12 +64,14 @@ export default function JAVTutorial() {
 				{data.map((jav) => {
 					return (
 						<JAVItem
+							key={jav.id}
 							id={jav.id}
 							name={jav.name}
 							date={jav.date}
 							watched={jav.watched}
 							onDeleteItem={deleteItem}
 							onWatchItem={watchItem}
+							onEditItem={editItem}
 						/>
 					);
 				})}
