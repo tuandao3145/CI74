@@ -1,0 +1,9 @@
+.article {
+	border: 1px solid;
+	padding: 10px;
+}
+.article .body .info {
+	display: flex;
+	gap: 10px;
+	margin: 20px;
+}
