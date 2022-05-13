@@ -1,0 +1,4 @@
+.expense-chart {
+	display: flex;
+	gap: 10px;
+}
